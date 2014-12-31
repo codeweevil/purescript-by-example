@@ -1,0 +1,19 @@
+{
+  "name": "purescript-test",
+  "version": "0.0.0",
+  "authors": [
+    "Mark Cummings <mark.cummings@cerner.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "purescript-math": "0.1.0"
+  }
+}
