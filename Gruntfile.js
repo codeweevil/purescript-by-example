@@ -6,6 +6,12 @@ module.exports = function(grunt) {
 
     srcFiles: ["src/**/*.purs", "bower_components/**/src/**/*.purs"],
 
+    execute: {
+        target: {
+            src: ['dist/Main.js']
+        }
+    },
+
     psc: {
       options: {
         main: "Chapter2",
@@ -20,7 +26,9 @@ module.exports = function(grunt) {
     dotPsci: ["<%=srcFiles%>"]
   });
 
+  grunt.loadNpmTasks('grunt-execute');
   grunt.loadNpmTasks("grunt-purescript");
 
   grunt.registerTask("default", ["psc:all", "dotPsci"]);
+  grunt.registerTask("run", ["default", "execute"])
 };
